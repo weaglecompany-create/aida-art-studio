@@ -1,0 +1,855 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Aida Art Studio — Original Paintings by Aida Auyelbekova</title><meta name="description" content="Original oil and acrylic paintings, commissions and painting masterclasses by Aida Auyelbekova in Boca Raton, Florida."><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500&family=DM+Mono:wght@400&display=swap">
+<style>
+/* Layout: a gallery wall — works hung at their true proportions, museum wall labels beside them, one band of gold leaf. */
+:root{
+  --wall:#F1F0EC; --wall-2:#E6E4DD; --ink:#1E2230; --ink-soft:#5A5F6E; --rule:#CFCCC2;
+  --gold-1:#B8892E; --gold-2:#E9CF7E; --gold-3:#8C6420; --accent:#9A2E2A;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --body:"Jost","Futura","Avenir Next",system-ui,sans-serif;
+  --mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --wall:#14161D; --wall-2:#1C1F28; --ink:#ECE8DE; --ink-soft:#A3A5AE; --rule:#33363F;
+  --gold-1:#C99A3C; --gold-2:#EED78F; --gold-3:#9A7128; --accent:#D0625B; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --wall:#14161D; --wall-2:#1C1F28; --ink:#ECE8DE; --ink-soft:#A3A5AE; --rule:#33363F;
+  --gold-1:#C99A3C; --gold-2:#EED78F; --gold-3:#9A7128; --accent:#D0625B; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--wall);color:var(--ink);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold-1);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.gold{background:linear-gradient(115deg,var(--gold-3),var(--gold-1) 25%,var(--gold-2) 45%,var(--gold-1) 60%,var(--gold-3) 85%,var(--gold-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--wall) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px;flex-wrap:wrap}
+.sig{font-family:var(--display);font-style:italic;font-size:26px;text-decoration:none}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:14px;letter-spacing:.06em}
+nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding-block:72px 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end}
+.hero h1{font-size:clamp(46px,8vw,108px);line-height:.95;letter-spacing:-.02em}
+.hero h1 em{font-style:italic}
+.hero p{max-width:34ch;font-size:19px;color:var(--ink-soft);margin:24px 0 0}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-block;padding:13px 22px;border:1px solid var(--ink);text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--wall)}
+.btn.solid{background:var(--ink);color:var(--wall)}
+.btn.solid:hover{background:var(--accent);border-color:var(--accent)}
+
+/* canvases */
+.canvas{position:relative;width:100%;max-width:100%;box-shadow:0 1px 0 var(--rule),0 18px 40px -22px rgba(0,0,0,.45);overflow:hidden}
+.canvas::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0 2px,transparent 2px 4px);pointer-events:none}
+.canvas .note{position:absolute;left:10px;bottom:10px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.35);padding:3px 7px}
+.c-phoenix{aspect-ratio:48/60;background:radial-gradient(60% 45% at 50% 42%,#F6D27A 0,#E2892C 30%,transparent 62%),radial-gradient(30% 50% at 22% 60%,#B8301F 0,transparent 70%),radial-gradient(30% 50% at 78% 60%,#B8301F 0,transparent 70%),linear-gradient(170deg,#2A1B1A,#5A1E1A 60%,#1A1212);border-right:6px solid #A82A20}
+.c-sakura{aspect-ratio:45/60;background:radial-gradient(18% 14% at 30% 30%,#F4C6CF 0,transparent 70%),radial-gradient(22% 16% at 62% 42%,#EFB3C0 0,transparent 70%),radial-gradient(14% 10% at 48% 62%,#F7D6DC 0,transparent 70%),radial-gradient(10% 8% at 72% 24%,#C0392B 0,transparent 80%),linear-gradient(160deg,#E9E2D6,#CFC6B6)}
+.c-cranes{aspect-ratio:45/60;background:radial-gradient(16% 12% at 68% 22%,#E6C46A 0,#C9973A 50%,transparent 75%),radial-gradient(26% 10% at 36% 48%,#F7F4EE 0,transparent 70%),radial-gradient(22% 8% at 58% 64%,#F7F4EE 0,transparent 70%),linear-gradient(180deg,#1C3550,#2D5277 55%,#173048)}
+.c-peonies{aspect-ratio:170/150;background:radial-gradient(22% 26% at 70% 40%,#E79AAE 0,#C25A78 50%,transparent 75%),radial-gradient(16% 20% at 84% 70%,#F2C1CD 0,transparent 75%),radial-gradient(18% 34% at 34% 44%,#D9B49A 0,#9C6B52 55%,transparent 80%),linear-gradient(135deg,#3E4A3A,#6B7A5C 50%,#2F382C)}
+.c-klimt{aspect-ratio:4/5;background:radial-gradient(14% 11% at 70% 18%,#F2D88A 0,#C9973A 60%,transparent 80%),radial-gradient(26% 40% at 46% 56%,#E8C9A8 0,transparent 70%),repeating-radial-gradient(circle at 30% 70%,#B8892E 0 3px,#2B3A55 3px 9px),linear-gradient(#2B3A55,#2B3A55)}
+.c-city1{aspect-ratio:3/4;background:radial-gradient(20% 30% at 50% 45%,#F2D04C 0,transparent 70%),linear-gradient(120deg,#FF6F91,#FFC75F)}
+.c-city2{aspect-ratio:3/4;background:radial-gradient(22% 30% at 50% 45%,#C0C0C8 0,transparent 70%),linear-gradient(120deg,#4B2C83,#00C2D1)}
+.c-city3{aspect-ratio:3/4;background:radial-gradient(22% 30% at 50% 50%,#E7C35A 0,transparent 70%),linear-gradient(120deg,#D7263D,#1B998B)}
+
+.photo{display:block;padding:0;border:0;background:var(--wall-2);cursor:zoom-in}
+.photo img{display:block;width:100%;height:auto}
+.photo::after{display:none}
+
+/* available */
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.feature-info{display:grid;gap:18px;min-width:0;position:sticky;top:calc(env(safe-area-inset-top,0px) + 80px)}
+.feature-info h2{font-size:clamp(36px,5vw,60px);line-height:1}
+.wt{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+.lede{margin:0;font-size:18px;max-width:46ch}
+.specs{margin:0;display:grid;border-top:1px solid var(--rule)}
+.specs div{display:grid;grid-template-columns:90px 1fr;gap:12px;padding-block:10px;border-bottom:1px solid var(--rule)}
+.specs dt{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
+.specs dd{margin:0}
+.specs .pending{color:var(--ink-soft);font-style:italic}
+.btn.solid{justify-self:start}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(64px,1fr));gap:8px}
+.feature+.feature{margin-top:88px;padding-top:72px;border-top:1px solid var(--rule)}
+.thumbs button{padding:0;border:1px solid var(--rule);background:none;cursor:zoom-in;aspect-ratio:3/4;overflow:hidden}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.thumbs button:hover img{transform:scale(1.06)}
+dialog#lightbox{padding:0;border:0;background:transparent;max-width:min(94vw,1200px);max-height:94vh}
+dialog#lightbox::backdrop{background:rgba(10,10,14,.88)}
+dialog#lightbox img,dialog#lightbox video{display:block;max-width:100%;max-height:92vh;width:auto;height:auto}
+.thumbs .vid{position:relative}
+.thumbs .play{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:20px;background:rgba(0,0,0,.25);text-shadow:0 1px 4px rgba(0,0,0,.6)}
+dialog#lightbox .close{position:absolute;top:8px;right:8px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font-size:24px;cursor:pointer}
+
+/* sold */
+.canvas.round{border-radius:50%;background:transparent}
+.canvas.shape{box-shadow:none;background:transparent}
+.canvas.shape img{filter:drop-shadow(0 14px 18px rgba(0,0,0,.35))}
+.sold-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:48px 32px;align-items:start}
+.sold-card{display:grid;gap:16px;min-width:0}
+.sold-card .thumbs{grid-template-columns:repeat(4,1fr)}
+
+/* sections */
+section{padding-block:72px;border-top:1px solid var(--rule)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:44px}
+.sec-head h2{font-size:clamp(34px,5vw,56px);line-height:1}
+.sec-head p{max-width:46ch;color:var(--ink-soft);margin:0}
+
+/* works */
+.wall{display:grid;grid-template-columns:repeat(12,1fr);gap:56px 40px;align-items:start}
+.work{display:grid;gap:16px;min-width:0}
+.w-a{grid-column:1/6}.w-b{grid-column:7/10;margin-top:80px}.w-c{grid-column:10/13;margin-top:20px}
+.w-d{grid-column:1/8}.w-e{grid-column:9/13;margin-top:60px}
+.walllabel{border-left:1px solid var(--gold-1);padding-left:14px;display:grid;gap:2px}
+.walllabel h3{font-size:22px;line-height:1.2}
+.walllabel .ru{font-family:var(--display);font-style:italic;color:var(--ink-soft);font-size:15px}
+.walllabel .med{font-size:14px;color:var(--ink-soft)}
+.walllabel .dim{font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+.tag{justify-self:start;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:2px 8px;border:1px solid var(--accent);color:var(--accent);margin-top:6px}
+.tag.comm{border-color:var(--gold-1);color:var(--gold-3)}
+:root[data-theme="dark"] .tag.comm{color:var(--gold-2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tag.comm{color:var(--gold-2)}}
+
+.series{margin-top:72px;display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:center}
+.series-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.series-row figure{margin:0;display:grid;gap:8px}
+.series-row figcaption{font-size:14px;color:var(--ink-soft)}
+.series h3{font-size:32px;line-height:1.1}
+.series p{color:var(--ink-soft);max-width:36ch}
+
+/* gold band */
+.band{position:relative;background:linear-gradient(115deg,var(--gold-3),var(--gold-1) 20%,var(--gold-2) 42%,var(--gold-1) 58%,var(--gold-3) 80%,var(--gold-2));color:#1E1A10;border:0}
+.band::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 64px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 1px,transparent 1px 64px)}
+.band .wrap{position:relative}
+.band blockquote{margin:0;font-family:var(--display);font-style:italic;font-size:clamp(28px,4.4vw,52px);line-height:1.15;max-width:22ch}
+.band .label{color:#3A2E12;margin-top:20px;display:block}
+
+/* commissions */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;counter-reset:s}
+.step{border-top:1px solid var(--ink);padding-top:16px;min-width:0}
+.step .n{font-family:var(--display);font-size:40px;line-height:1;color:var(--gold-1)}
+.step h3{font-family:var(--body);font-weight:500;font-size:17px;margin:12px 0 6px}
+.step p{margin:0;color:var(--ink-soft);font-size:15px}
+.cert{margin-top:44px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;padding:24px;background:var(--wall-2)}
+.seal{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-style:italic;font-size:26px;color:#1E1A10;background:radial-gradient(circle at 35% 30%,var(--gold-2),var(--gold-1) 55%,var(--gold-3))}
+.cert p{margin:0;max-width:62ch}
+
+/* classes */
+.classes{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.lemon{aspect-ratio:1;max-width:100%;background:radial-gradient(30% 22% at 40% 45%,#F7E15A 0,#E8C42C 55%,transparent 72%),radial-gradient(20% 14% at 66% 64%,#F3D94B 0,transparent 75%),radial-gradient(14% 6% at 58% 32%,#4E8A3C 0,transparent 80%),linear-gradient(150deg,#BFD8E0,#7FA9B8);position:relative}
+.mc-video{display:block;width:100%;max-width:420px;aspect-ratio:9/16;object-fit:cover;background:var(--wall-2);justify-self:center;box-shadow:0 1px 0 var(--rule),0 18px 40px -22px rgba(0,0,0,.45)}
+.classes ul{list-style:none;padding:0;margin:24px 0;display:grid;gap:10px}
+.classes li{display:grid;grid-template-columns:110px 1fr;gap:12px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.classes li span:first-child{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
+.contact h2{font-size:clamp(40px,6vw,80px);line-height:.95}
+.lines{display:grid;gap:18px;align-content:start}
+.line{display:grid;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:14px}
+.line .v{font-family:var(--display);font-size:28px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;user-select:all}
+.copy{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--rule);color:var(--ink-soft);padding:4px 8px;cursor:pointer;user-select:none}
+.copy:hover{border-color:var(--ink);color:var(--ink)}
+footer{padding-block:28px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.about-photo img{display:block;width:100%;height:auto;box-shadow:0 1px 0 var(--rule),0 18px 40px -22px rgba(0,0,0,.45)}
+.about-text{display:grid;gap:18px;min-width:0}
+.about-text h2{font-size:clamp(36px,5vw,60px);line-height:1}
+.about-text p{margin:0;max-width:56ch}
+.about-text .lead{font-size:20px}
+.about-strip{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.about-strip button{padding:0;border:0;background:var(--wall-2);cursor:zoom-in;aspect-ratio:4/5;overflow:hidden}
+.about-strip img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.about-strip button:hover img{transform:scale(1.04)}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:28px}.about-photo{max-width:480px}}
+@media (max-width:480px){.about-strip{grid-template-columns:1fr 1fr}.about-strip button:last-child{display:none}}
+@media (max-width:860px){
+  .hero,.classes,.contact,.series,.feature{grid-template-columns:1fr}
+  .feature{gap:28px}.feature-info{position:static}
+  .hero{padding-block:44px 40px;gap:36px}
+  .wall{grid-template-columns:1fr 1fr;gap:40px 20px}
+  .w-a,.w-d{grid-column:1/-1;margin-top:0}
+  .w-b,.w-c,.w-e{grid-column:auto;margin-top:0}
+  .w-e{grid-column:1/-1;max-width:420px}
+  .steps{grid-template-columns:1fr 1fr}
+  section{padding-block:52px}
+}
+@media (max-width:480px){
+  .wall,.steps{grid-template-columns:1fr}
+  .series-row{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  nav{gap:14px}
+  .classes li{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero .canvas{animation:hang .9s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes hang{from{transform:translateY(-10px) rotate(-1.2deg)}to{transform:none}}
+}
+</style>
+
+<header>
+  <div class="wrap">
+    <a class="sig gold" href="#top">Aida</a>
+    <nav aria-label="Sections">
+      <a href="#available">Available</a>
+      <a href="#sold">Sold</a>
+      <a href="#about">About</a>
+      <a href="#commissions">Commissions</a>
+      <a href="#classes">Masterclasses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <span class="label">Oil · Palette knife · Gold leaf — Boca Raton, Florida</span>
+      <h1 style="margin-top:18px">Paintings with <em>texture</em> you can <em class="gold">feel</em></h1>
+      <p>Original oil and mixed‑media paintings by Aida. Commissions for homes, restaurants and private spaces, and acrylic masterclasses in South Florida.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="#commissions">Commission a painting</a>
+        <a class="btn" href="#available">See the paintings</a>
+      </div>
+    </div>
+    <a href="#available" class="canvas photo"><img src="img/ps-full.jpg" alt="Awakened by Love: winged Cupid kissing Psyche, painted as glowing marble in a deep teal dreamscape" width="1600" height="2000"></a>
+  </div>
+
+  <section id="available">
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/phx-full.jpg" aria-label="Open full view"><img src="img/phx-full.jpg" alt="A New Beginning: a fiery phoenix of raised gold-leaf feathers rising through a swirling night sky toward a glowing moon" width="1600" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>A New Beginning<span class="wt">Some things in life don’t end. They become the beginning of something new.</span></h2>
+        <p class="lede">For me, the phoenix is about renewal and becoming. Life sometimes takes us through things we never expected, but they don’t have to stop us: we transform through what life leads us through and become someone new along the way. Rising through the swirling night toward the moon, the bird is a reminder to trust that something beautiful is ahead. The feathers are sculpted in raised texture paste and laid in gold leaf, so the bird glows and shifts as the light changes.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil on canvas, palette knife, texture paste, gold leaf</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">48 × 60 in · 122 × 152 cm</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Hanging</dt><dd>Painted red edges, ready to hang without a frame</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/phx-bird.jpg"><img src="img/phx-bird.jpg" alt="Detail: the phoenix rising through the swirl" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/phx-moon.jpg"><img src="img/phx-moon.jpg" alt="Detail: the moon in gold leaf" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/phx-wing.jpg"><img src="img/phx-wing.jpg" alt="Detail: raised gold-leaf feathers" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/phx-tail.jpg"><img src="img/phx-tail.jpg" alt="Detail: tail feathers with raised gold lines" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/ps-full.jpg" aria-label="Open full view"><img src="img/ps-full.jpg" alt="Awakened by Love: winged Cupid embracing and kissing Psyche, painted as glowing marble after Canova's sculpture, in a deep teal dreamscape with textured, crackled foliage" width="1600" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Awakened by Love<span class="wt">The kiss that brings her back to life</span></h2>
+        <p class="lede">Inspired by Antonio Canova's marble masterpiece <em>Psyche Revived by Cupid's Kiss</em> in the Louvre, Paris. In the myth, Psyche opens a forbidden jar and falls into a deathlike sleep. Cupid, the god of love, finds her and brings her back to life with a single kiss. Here the marble seems to breathe. The deep blue holds the night of Psyche's sleep, the turquoise is life returning to her, and at the center a warm light breaks through, like love itself.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil on canvas, texture paste</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">48 × 60 in · 122 × 152 cm</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/ps-kiss.jpg"><img src="img/ps-kiss.jpg" alt="Detail: the kiss" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/ps-drapery.jpg"><img src="img/ps-drapery.jpg" alt="Detail: Psyche's drapery and textured ground" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/ps-branch.jpg"><img src="img/ps-branch.jpg" alt="Detail: wing and textured branch" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/ps-texture.jpg"><img src="img/ps-texture.jpg" alt="Detail: crackled texture paste in the sky" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/ps-left.jpg"><img src="img/ps-left.jpg" alt="Detail: Cupid and the raised texture below" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/nj-full.jpg" aria-label="Open full view"><img src="img/nj-full.jpg" alt="When the Music Starts: a drummer in gold hoop earrings plays a red-and-blue drum kit while a couple swing-dances under strings of lights, with colorful balconies, a crescent moon and raised gold patterns" width="1500" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>When the Music Starts</h2>
+        <p class="lede">A girl starts playing her drums on an ordinary street at night. A man walking home from work stops, smiles and begins to dance, pulling a stranger into the rhythm. Soon a crowd gathers under the string lights, clapping along. One song, and people who never met become one happy circle. Raised gold and silver lines and glossy beads let you feel the beat with your fingertips.</p>
+        <dl class="specs">
+          <div><dt>Style</dt><dd>Pop art</dd></div>
+          <div><dt>Medium</dt><dd>Acrylic on canvas, multicolored metallic leaf, raised 3D details</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">30 × 40 in · 76 × 101 cm</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/nj-street.jpg"><img src="img/nj-street.jpg" alt="Detail: the drummer, balconies and the night sky" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nj-dance.jpg"><img src="img/nj-dance.jpg" alt="Detail: the swing-dancing couple under the lights" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nj-drums.jpg"><img src="img/nj-drums.jpg" alt="Detail: drum kit with raised gold mandala and beads" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nj-texture.jpg"><img src="img/nj-texture.jpg" alt="Detail: raised gold outlines and glossy beads" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/mv-full.jpg" aria-label="Open full view"><img src="img/mv-full.jpg" alt="Miami Vibe: a blonde DJ in a yellow bikini, pink headphones and sunglasses spins a turntable with a cocktail in hand, above a sea of patterns, with a fluffy Pomeranian, gold-leaf waves and a city skyline" width="1500" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Miami Vibe</h2>
+        <p class="lede">This one began at a rooftop pool party in Downtown Miami, twenty floors above the city. The river on one side, palm trees in the distance on the other, and a beautiful DJ who held the whole crowd spellbound. Her little dog sat happily by her side the entire time, listening to every track and never leaving her. I wanted to keep that afternoon forever: the music, the view and that pure Miami feeling.</p>
+        <dl class="specs">
+          <div><dt>Style</dt><dd>Pop art</dd></div>
+          <div><dt>Medium</dt><dd>Acrylic on canvas, gold and colored metallic leaf</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">36 × 48 in · 91 × 122 cm</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/mv-face.jpg"><img src="img/mv-face.jpg" alt="Detail: the DJ and the city skyline on gold leaf" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/mv-drink.jpg"><img src="img/mv-drink.jpg" alt="Detail: cocktail, gold-leaf waves and music notes" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/mv-dog.jpg"><img src="img/mv-dog.jpg" alt="Detail: the Pomeranian among bright patterns" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/mv-music.jpg"><img src="img/mv-music.jpg" alt="Detail: turntable, music notes and patterned waves" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/gm-full.jpg" aria-label="Open full view"><img src="img/gm-full.jpg" alt="Good Morning, Nicoletta: a blonde woman in a black-and-white striped dress flies through a gold-leaf sky over New York with a coffee cup, a pink phone and a barking little dog on a leash" width="1500" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Good Morning, Nicoletta<span class="wt">New York vibe</span></h2>
+        <p class="lede">One morning, on my way out for coffee, I saw a girl walking a tiny dog. Phone in one hand, coffee in the other, leash somewhere in between, while her little dog ran in circles and barked at every passerby, small but very loud. I loved that scene so much that I had to paint it. Here she is: coffee spilling, a shoe flying off, hair streaming across a sky of gold leaf, and still perfectly stylish.</p>
+        <dl class="specs">
+          <div><dt>Style</dt><dd>Pop art</dd></div>
+          <div><dt>Medium</dt><dd>Acrylic on canvas, gold and silver leaf</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">36 × 48 in · 91 × 122 cm</dd></div>
+          <div><dt>Year</dt><dd>2025</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/gm-face.jpg"><img src="img/gm-face.jpg" alt="Detail: face and hair on gold leaf" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-city.jpg"><img src="img/gm-city.jpg" alt="Detail: New York skyline, coffee cup and silver leaf waves" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-dog.jpg"><img src="img/gm-dog.jpg" alt="Detail: the barking little dog on a pink leash" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-pattern.jpg"><img src="img/gm-pattern.jpg" alt="Detail: patterned garden and the artist's signature" loading="lazy"></button>
+        </div>
+        <span class="label" style="margin-top:4px">In an interior</span>
+        <div class="thumbs" aria-label="In an interior">
+          <button class="zoom" type="button" data-src="img/gm-room1.jpg"><img src="img/gm-room1.jpg" alt="Good Morning, Nicoletta shown in an interior, view 1" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-room2.jpg"><img src="img/gm-room2.jpg" alt="Good Morning, Nicoletta shown in an interior, view 2" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-room3.jpg"><img src="img/gm-room3.jpg" alt="Good Morning, Nicoletta shown in an interior, view 3" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-room4.jpg"><img src="img/gm-room4.jpg" alt="Good Morning, Nicoletta shown in an interior, view 4" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-room5.jpg"><img src="img/gm-room5.jpg" alt="Good Morning, Nicoletta shown in an interior, view 5" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-room6.jpg"><img src="img/gm-room6.jpg" alt="Good Morning, Nicoletta shown in an interior, view 6" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/gm-room7.jpg"><img src="img/gm-room7.jpg" alt="Good Morning, Nicoletta shown in an interior, view 7" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/edge-full.jpg" aria-label="Open full view"><img src="img/edge-full.jpg" alt="The Last Step: a small figure on the edge of a cliff reaching into a whirlwind of golden light under a burning red sky" width="1500" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>The Last Step</h2>
+        <p class="lede">At the edge of a burning world, a lone traveler reaches into a whirlwind of golden light. Behind him the sky turns dark red and a shadow creeps closer. Ahead, everything glows. Raised strokes and gold leaf rise from the canvas like flame.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil on canvas, texture paste, impasto strokes, gold leaf</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">30 × 40 in · 76 × 101 cm</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom vid" type="button" data-video="img/edge-gold.mp4"><img src="img/edge-gold.jpg" alt="Video: gold leaf texture catching the light" loading="lazy"><span class="play" aria-hidden="true">▶</span></button>
+          <button class="zoom" type="button" data-src="img/edge-boy.jpg"><img src="img/edge-boy.jpg" alt="Detail: the traveler at the cliff edge" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/edge-sky.jpg"><img src="img/edge-sky.jpg" alt="Detail: red storm clouds and the figures behind" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/edge-cliff.jpg"><img src="img/edge-cliff.jpg" alt="Detail: textured cliff with gold leaf" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/edge-gold2.jpg"><img src="img/edge-gold2.jpg" alt="Detail: raised gold leaf texture" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/full.jpg" aria-label="Open full view"><img src="img/full.jpg" alt="Full view of the painting" width="1500" height="2000"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Beneath the Softness<span class="wt">Painting no. 4 of the challenge</span></h2>
+        <p class="lede"><em>Where softness holds strength.</em> Her gaze says more than words ever could: calm, confident, and impossible to fully understand. The white orchids bring a different feeling to the painting. Delicate, pure, and quietly powerful. I wanted to capture that moment when beauty doesn't need to explain itself.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil on canvas, brush and palette knife; gold and silver liner, gold leaf paint for the ornaments</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">36 × 48 in · 91 × 122 cm</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/face.jpg"><img src="img/face.jpg" alt="Detail: face and orchids" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/turban.jpg"><img src="img/turban.jpg" alt="Detail: textured head wrap on gold ground" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/shawl.jpg"><img src="img/shawl.jpg" alt="Detail: gold ornament on the blue shawl" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/orchids.jpg"><img src="img/orchids.jpg" alt="Detail: orchids and silver lines" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/leo-full.jpg" aria-label="Open full view"><img src="img/leo-full.jpg" alt="Guardian of the Peaks: a snow leopard resting on a silver-leaf rock, snowy peaks and a full silver moon behind it on a black night sky" width="1950" height="1550" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Guardian of the Peaks</h2>
+        <p class="lede">The snow leopard lives high in the mountains, so quiet and rare that people call it the ghost of the mountains. Only a few thousand remain in the wild, and it is protected and listed in the Red Book. Here it rests on a rock of silver leaf under a full moon, calm and watchful, a reminder of how much beauty we still have to protect.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Acrylic on canvas, silver leaf</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">31 × 39 in · 79 × 99 cm</dd></div>
+          <div><dt>Canvas</dt><dd>Unstretched (no stretcher bars). On request, we can stretch it and fit a matching frame</dd></div>
+          <div><dt>Year</dt><dd>2025</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/leo-portrait.jpg"><img src="img/leo-portrait.jpg" alt="Close-up: the snow leopard's face, pale green eyes and fine whiskers" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/leo-face.jpg"><img src="img/leo-face.jpg" alt="Detail: the snow leopard's face and green eyes" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/leo-moon.jpg"><img src="img/leo-moon.jpg" alt="Detail: silver-leaf moon and mountain peaks" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/leo-silver.jpg"><img src="img/leo-silver.jpg" alt="Detail: paws resting on the silver-leaf rock" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/leo-tail.jpg"><img src="img/leo-tail.jpg" alt="Detail: thick fur and the long spotted tail" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/fort-full.jpg" aria-label="Open full view"><img src="img/fort-full.jpg" alt="Fortunephant: a golden elephant carrying a duck tycoon on gold bars down a palm-lined street, scattering coins" width="1500" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Fortunephant</h2>
+        <p class="lede">A golden elephant strolls through a sunset city of palms and neon, carrying a fortune in gold bars and money bags. Coins spill from its trunk, and its tusks are dressed in gold chains and a crystal dollar pendant set with real Swarovski crystals.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil, acrylic and Swarovski crystals on canvas</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">30 × 40 in · 76 × 101 cm</dd></div>
+          <div><dt>Year</dt><dd>2025</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom vid" type="button" data-video="img/fort-sparkle.mp4"><img src="img/fort-sparkle.jpg" alt="Video: crystals sparkling on the tusk" loading="lazy"><span class="play" aria-hidden="true">▶</span></button>
+          <button class="zoom" type="button" data-src="img/fort-crystals.jpg"><img src="img/fort-crystals.jpg" alt="Detail: Swarovski crystal dollar pendant" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/fort-scrooge.jpg"><img src="img/fort-scrooge.jpg" alt="Detail: rider on gold bars and palms" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/fort-city.jpg"><img src="img/fort-city.jpg" alt="Detail: neon welcome sign and city" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/fort-coins.jpg"><img src="img/fort-coins.jpg" alt="Detail: coins spilling from the trunk" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/fort-back.jpg"><img src="img/fort-back.jpg" alt="Signed and titled by the artist on the back" loading="lazy"></button>
+        </div>
+        <span class="label" style="margin-top:4px">In an interior</span>
+        <div class="thumbs" aria-label="In an interior">
+          <button class="zoom" type="button" data-src="img/fort-room1.jpg"><img src="img/fort-room1.jpg" alt="Fortunephant shown in an interior, view 1" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/fort-room2.jpg"><img src="img/fort-room2.jpg" alt="Fortunephant shown in an interior, view 2" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/fort-room3.jpg"><img src="img/fort-room3.jpg" alt="Fortunephant shown in an interior, view 3" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/fort-room4.jpg"><img src="img/fort-room4.jpg" alt="Fortunephant shown in an interior, view 4" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/nef-full.jpg" aria-label="Open full view"><img src="img/nef-full.jpg" alt="Awakening of the Queen: Nefertiti before a gold-leaf sun disc, with an ankh, pyramids and a black sphynx cat" width="1500" height="2000" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Awakening of the Queen <span class="wt">Nefertiti, Egypt's sun queen</span></h2>
+        <p class="lede">Nefertiti stands before a sun disc laid in gold leaf, holding the ankh. The Eye of Horus rests on her collar, the pyramids rise below, and a black sphynx cat in a scarab collar keeps watch. A border of hieroglyphs frames the whole canvas.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil and gold leaf on canvas</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">30 × 40 in · 76 × 101 cm</dd></div>
+          <div><dt>Year</dt><dd>2025</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/nef-face.jpg"><img src="img/nef-face.jpg" alt="Detail: Nefertiti's face and crown" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-cat.jpg"><img src="img/nef-cat.jpg" alt="Detail: sphynx cat with scarab collar" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-hand.jpg"><img src="img/nef-hand.jpg" alt="Detail: hand, ankh staff and Eye of Horus" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-gold.jpg"><img src="img/nef-gold.jpg" alt="Detail: gold leaf sun and hieroglyphs" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-back.jpg"><img src="img/nef-back.jpg" alt="Signed and titled by the artist on the back" loading="lazy"></button>
+        </div>
+        <span class="label" style="margin-top:4px">In an interior</span>
+        <div class="thumbs" aria-label="In an interior">
+          <button class="zoom" type="button" data-src="img/nef-room1.jpg"><img src="img/nef-room1.jpg" alt="Awakening of the Queen shown in an interior, view 1" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room2.jpg"><img src="img/nef-room2.jpg" alt="Awakening of the Queen shown in an interior, view 2" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room3.jpg"><img src="img/nef-room3.jpg" alt="Awakening of the Queen shown in an interior, view 3" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room4.jpg"><img src="img/nef-room4.jpg" alt="Awakening of the Queen shown in an interior, view 4" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room5.jpg"><img src="img/nef-room5.jpg" alt="Awakening of the Queen shown in an interior, view 5" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room6.jpg"><img src="img/nef-room6.jpg" alt="Awakening of the Queen shown in an interior, view 6" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room7.jpg"><img src="img/nef-room7.jpg" alt="Awakening of the Queen shown in an interior, view 7" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room8.jpg"><img src="img/nef-room8.jpg" alt="Awakening of the Queen shown in an interior, view 8" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/nef-room9.jpg"><img src="img/nef-room9.jpg" alt="Awakening of the Queen shown in an interior, view 9" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/eleph-full.jpg" aria-label="Open full view"><img src="img/eleph-full.jpg" alt="Until You Find Your Way: a mother elephant raising her trunk to the sky beside her baby, in bold blue and gold strokes against a coral and orange sunset with golden ornaments" width="1600" height="1581" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Until You Find Your Way<span class="wt">A mother's love is the strongest love</span></h2>
+        <p class="lede">A mother's love is the strongest love in the world. The mother elephant raises her trunk to the sky while her little one walks close beside her, safe under her protection. She will always support him and stay by his side until he finds his own way. Bold palette-knife strokes of blue and gold glow against a sunset of coral, orange and violet, framed by golden ornaments stenciled by hand. In many cultures an elephant with a raised trunk is a symbol of good luck.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Acrylic on canvas, palette knife; ornaments stenciled in gold acrylic paint</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">43 × 42.5 in · 109 × 108 cm</dd></div>
+          <div><dt>Canvas</dt><dd>Unstretched (no stretcher bars). On request, we can stretch it and fit a matching frame</dd></div>
+          <div><dt>Year</dt><dd>2024</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/eleph-baby.jpg"><img src="img/eleph-baby.jpg" alt="Detail: the baby elephant" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/eleph-trunk.jpg"><img src="img/eleph-trunk.jpg" alt="Detail: raised trunk and golden ornament" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/eleph-mandala.jpg"><img src="img/eleph-mandala.jpg" alt="Detail: golden mandala and palette-knife sky" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/eleph-legs.jpg"><img src="img/eleph-legs.jpg" alt="Detail: textured legs and the artist's signature" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/paris-full.jpg" aria-label="Open full view"><img src="img/paris-full.jpg" alt="Paris in Bloom: the Eiffel Tower under a bright blue sky, framed by green trees and pink flowers, with a riverboat on the Seine" width="1500" height="1755" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Paris in Bloom</h2>
+        <p class="lede">Springtime on the Seine, when Paris is in full bloom. The Eiffel Tower rises into a clear blue sky, a riverboat glides past the old stone embankment, and pink blossoms and fresh green leaves frame the view like a window onto Paris. Almost the entire painting, from the sky and clouds to the leaves, flowers and water, is laid on with a palette knife; only the delicate lacework of the Eiffel Tower is painted with a brush.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil on canvas, palette knife and brush</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">23.5 × 27.5 in · 60 × 70 cm</dd></div>
+          <div><dt>Canvas</dt><dd>Unstretched (no stretcher bars). On request, we can stretch it and fit a matching frame</dd></div>
+          <div><dt>Year</dt><dd>2024</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/paris-tower.jpg"><img src="img/paris-tower.jpg" alt="Detail: the Eiffel Tower" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/paris-boat.jpg"><img src="img/paris-boat.jpg" alt="Detail: riverboat on the Seine" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/paris-flowers.jpg"><img src="img/paris-flowers.jpg" alt="Detail: pink flowers and the artist's signature" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap feature">
+      <div class="feature-main">
+        <button class="canvas photo zoom" type="button" data-src="img/archer-full.jpg" aria-label="Open full view"><img src="img/archer-full.jpg" alt="Daughter of the Steppe: a young woman in a fur hat and blue robe gallops across the steppe on a white horse at sunset, drawing her bow" width="1600" height="1600" loading="lazy"></button>
+      </div>
+      <div class="feature-info">
+        <span class="label">Available now · Original</span>
+        <h2>Daughter of the Steppe</h2>
+        <p class="lede">At sunset a young nomad woman gallops across the Great Steppe on a white horse, drawing her bow at full speed. Her fur hat and blue robe catch the wind, the horse's mane flies like smoke, and the sky burns orange and violet behind her. In the days when nomads roamed the steppe, no one asked whether you were a boy or a girl: every child learned to ride and shoot a bow almost before they could walk. This painting is a tribute to those strong, free daughters of the steppe.</p>
+        <dl class="specs">
+          <div><dt>Medium</dt><dd>Oil on canvas</dd></div>
+          <div><dt>Size</dt><dd style="font-variant-numeric:tabular-nums">23 × 23 in · 58 × 58 cm</dd></div>
+          <div><dt>Canvas</dt><dd>Unstretched (no stretcher bars). On request, we can stretch it and fit a matching frame</dd></div>
+          <div><dt>Year</dt><dd>2024</dd></div>
+          <div><dt>Price</dt><dd class="pending">On request</dd></div>
+        </dl>
+        <a class="btn solid" href="#contact">Ask about this painting</a>
+        <div class="thumbs" aria-label="Details">
+          <button class="zoom" type="button" data-src="img/archer-rider.jpg"><img src="img/archer-rider.jpg" alt="Detail: the archer drawing her bow" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/archer-horse.jpg"><img src="img/archer-horse.jpg" alt="Detail: the white horse and the rider's robe" loading="lazy"></button>
+          <button class="zoom" type="button" data-src="img/archer-sun.jpg"><img src="img/archer-sun.jpg" alt="Detail: sunset over the steppe" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <dialog id="lightbox"><button type="button" class="close" aria-label="Close">×</button><img alt="Enlarged view"><video muted loop playsinline controls hidden></video></dialog>
+
+
+  <section id="sold">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Sold works</h2>
+        <p>Paintings now in private homes and spaces. Each one can inspire a new commission in a similar style, size or palette.</p>
+      </div>
+      <div class="sold-grid">
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/sakura.jpg" aria-label="Open full view"><img src="img/sakura.jpg" alt="Whisper of Sakura: a young woman in a pale blue kimono with a red obi and red paper umbrella, turning away beneath cherry blossoms, a pagoda and Mount Fuji in the mist" width="1500" height="2000" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Whisper of Sakura</h3>
+            <span class="med"><em>A Japanese pair</em>, sold together to one collector. A quiet moment under falling cherry blossoms, the pagoda and Mount Fuji fading into the mist behind her. Her obi is laid in shimmering red leaf. Oil on canvas, palette knife, red metal leaf.</span>
+            <span class="dim">45 × 60 cm · 18 × 24 in · 2025</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/cranes.jpg" aria-label="Open full view"><img src="img/cranes.jpg" alt="A Thousand Years of Happiness: two red-crowned cranes dancing before a large red sun, with gold clouds and golden grass" width="1500" height="2000" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>A Thousand Years of Happiness</h3>
+            <span class="med"><em>A Japanese pair</em>, sold together to one collector. In Japan the crane is said to live a thousand years, and a dancing pair stands for lasting love, loyalty and happiness. Two cranes dance before a red sun among gold clouds. Oil on canvas, palette knife, gold oil paint.</span>
+            <span class="dim">45 × 60 cm · 18 × 24 in · 2025</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/cat-tiger.jpg" aria-label="Open full view"><img src="img/cat-tiger.jpg" alt="What the Water Knows: a fluffy kitten at the water's edge under a starry blue sky, its reflection in the water is a tiger" width="700" height="1680" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>What the Water Knows</h3>
+            <span class="med"><em>Some who look small carry a tiger inside.</em> The water reflects not how the kitten looks, but who it truly is. Oil on canvas.</span>
+            <span class="dim">120 × 50 cm · 47 × 20 in · 2024</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom shape" type="button" data-src="img/koi-heart.webp" aria-label="Open full view"><img src="img/koi-heart.webp" alt="Koi of Fortune: a heart-shaped canvas with a red koi and a golden koi circling each other among lotus flowers on deep teal water" width="1318" height="1352" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Koi of Fortune</h3>
+            <span class="med">In Chinese tradition, a pair of koi brings abundance, harmony and good luck to the home. Oil and gold oil paint on heart-shaped canvas.</span>
+            <span class="dim">approx. 40 cm · 16 in tall · 2024</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/mc-full.jpg" aria-label="Open full view"><img src="img/mc-full.jpg" alt="Mother and Child: a sleeping mother holding her child before a gold leaf sun, hair full of white flowers, surrounded by colourful circles" width="1500" height="1500" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Mother and Child</h3>
+            <span class="med">Acrylic, gold leaf sun, gold and silver liner, 3D textured flowers. Inspired by Klimt. Commissioned for a private kindergarten.</span>
+            <span class="dim">130 × 130 cm · 51 × 51 in · 2023</span>
+            <span class="tag">Sold</span>
+          </div>
+          <div class="thumbs" aria-label="Details">
+            <button class="zoom" type="button" data-src="img/mc-left.jpg"><img src="img/mc-left.jpg" alt="Detail: flowing hair with white flowers" loading="lazy"></button>
+            <button class="zoom" type="button" data-src="img/mc-right.jpg"><img src="img/mc-right.jpg" alt="Detail: mother and child with raised flowers" loading="lazy"></button>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/horse.jpg" aria-label="Open full view"><img src="img/horse.jpg" alt="Golden Steppe Horse: a horse's head in a bridle on a dark ground, covered in gold ornamental patterns" width="1200" height="1500" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Golden Steppe Horse</h3>
+            <span class="med">Oil and gold oil paint on canvas.</span>
+            <span class="dim">50 × 40 cm · 20 × 16 in · 2023</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom round" type="button" data-src="img/peony-round.webp" aria-label="Open full view"><img src="img/peony-round.webp" alt="Peony Bloom: a round canvas filled with large pink and lilac peonies over a lavender and gold background" width="1400" height="1400" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Peony Bloom</h3>
+            <span class="med">Oil and gold oil paint on round canvas.</span>
+            <span class="dim">Ø 50 cm · Ø 20 in · 2023</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom round" type="button" data-src="img/bird-peonies.webp" aria-label="Open full view"><img src="img/bird-peonies.webp" alt="Peony Wreath: a round canvas with a wreath of soft pink peonies and green leaves, a small pink bird perched at the top" width="1400" height="1400" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Peony Wreath</h3>
+            <span class="med">Oil on round canvas.</span>
+            <span class="dim">Ø 50 cm · Ø 20 in · 2023</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/elephant.jpg" aria-label="Open full view"><img src="img/elephant.jpg" alt="Big Mood: an elephant's head in bold strokes of orange, red, blue and white on a black background" width="1200" height="1800" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Big Mood</h3>
+            <span class="med">Commissioned. Painted after a reference image chosen by the client, reinterpreted in the artist's own palette and brushwork. Acrylic on canvas.</span>
+            <span class="dim">90 × 60 cm · 35 × 24 in · 2023</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/peacock.jpg" aria-label="Open full view"><img src="img/peacock.jpg" alt="Golden Peacock: a blue peacock on a branch with a long white and gold tail and gold baroque ornaments" width="900" height="1800" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Golden Peacock</h3>
+            <span class="med">Acrylic on canvas with gold accents.</span>
+            <span class="dim">100 × 50 cm · 39 × 20 in · 2022</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/lion.jpg" aria-label="Open full view"><img src="img/lion.jpg" alt="The King: a lion in a gold crown with a blue gem and a gold chain, on black marble with gold veins, resting a paw on a pile of hundred-dollar bills" width="1050" height="1500" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>The King</h3>
+            <span class="med">Oil on canvas with gold details and a collage of prop banknotes.</span>
+            <span class="dim">100 × 60 cm · 39 × 24 in · 2021</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/tiger.jpg" aria-label="Open full view"><img src="img/tiger.jpg" alt="Amur Tiger: a tiger walking straight toward the viewer across a grey rock, against a golden autumn background painted with a palette knife" width="1200" height="1800" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Amur Tiger</h3>
+            <span class="med">Oil on canvas, palette knife background.</span>
+            <span class="dim">90 × 60 cm · 35 × 24 in · 2021</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/peonies.jpg" aria-label="Open full view"><img src="img/peonies.jpg" alt="Girl with Peonies: a woman in a white dress seen from behind, her head hidden by huge pink peonies" width="1500" height="1700" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Girl with Peonies</h3>
+            <span class="med">Oil on canvas. Commissioned.</span>
+            <span class="dim">170 × 150 cm · 67 × 59 in · 2020</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/redpoll.jpg" aria-label="Open full view"><img src="img/redpoll.jpg" alt="Winter Bullfinch: a small red-breasted bird perched on snowy spruce branches against a pale winter sky" width="1200" height="1440" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Winter Bullfinch</h3>
+            <span class="med">Oil on canvas, textured snow.</span>
+            <span class="dim">35 × 30 cm · 14 × 12 in · 2020</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/black-horse.jpg" aria-label="Open full view"><img src="img/black-horse.jpg" alt="Black Stallion in the Snow: a black horse galloping through deep snow in front of white mountains" width="1697" height="1200" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Black Stallion in the Snow</h3>
+            <span class="med">Oil on canvas.</span>
+            <span class="dim">20 × 30 cm · 8 × 12 in · 2020</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/strawberries.jpg" aria-label="Open full view"><img src="img/strawberries.jpg" alt="Sweet: ripe strawberries piled in a brandy glass on a black background" width="940" height="1166" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Sweet</h3>
+            <span class="med"><em>Sweet &amp; Spicy</em>, a pair. Life is never only sweet or only spicy, and a little heat is not a bad thing. It is just another taste of life. Oil on canvas.</span>
+            <span class="dim">30 × 25 cm · 12 × 10 in · 2020</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+        <article class="sold-card">
+          <button class="canvas photo zoom" type="button" data-src="img/peppers.jpg" aria-label="Open full view"><img src="img/peppers.jpg" alt="Spicy: red chili peppers in a wine glass on a black background" width="966" height="1184" loading="lazy"></button>
+          <div class="walllabel">
+            <h3>Spicy</h3>
+            <span class="med"><em>Sweet &amp; Spicy</em>, a pair. Life is never only sweet or only spicy, and a little heat is not a bad thing. It is just another taste of life. Oil on canvas.</span>
+            <span class="dim">30 × 25 cm · 12 × 10 in · 2020</span>
+            <span class="tag">Sold</span>
+          </div>
+        </article>
+      </div>
+      <a class="btn" href="#commissions" style="margin-top:40px">Commission a similar piece</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="about">
+        <div class="about-photo"><img src="img/aida-portrait.jpg" alt="Aida Auyelbekova holding her paintbrushes over a palette full of oil paint" width="1200" height="1600" loading="lazy"></div>
+        <div class="about-text">
+          <span class="label">About the artist</span>
+          <h2>Aida Auyelbekova</h2>
+          <p class="lead">I'm a painter from Kazakhstan, now living and working in Boca Raton, Florida. I have been drawing since childhood and trained professionally as a painter in 2019.</p>
+          <p>I love animals, so almost every painting I create has an animal in it. I love working with a palette knife: it gives a painting texture and a completely different way of seeing it.</p>
+          <p>Pop art is where my ideas come fast. When a picture flashes in my head, I put it on canvas right away in bright acrylics. Oil is the opposite: slow and thoughtful. I can let a painting rest for a while and come back to it with a new idea, new strength and new emotions.</p>
+          <p>My paintings have found their homes in private kindergartens, restaurants and private collections in Kazakhstan. In my first two years in Florida, my work has already found collectors in the United States too, and I also host acrylic masterclasses here.</p>
+          <a class="btn" href="#contact" style="justify-self:start">Get in touch</a>
+        </div>
+      </div>
+      <div class="about-strip">
+        <button class="zoom" type="button" data-src="img/aida-painting.jpg"><img src="img/aida-painting.jpg" alt="Aida painting a large peony by the window" loading="lazy"></button>
+        <button class="zoom" type="button" data-src="img/aida-hanging.jpg"><img src="img/aida-hanging.jpg" alt="Aida hanging a finished peony painting on the wall" loading="lazy"></button>
+        <button class="zoom" type="button" data-src="img/aida-profile.jpg"><img src="img/aida-profile.jpg" alt="Aida at work in her studio" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Studio statement">
+    <div class="wrap">
+      <blockquote>Paint laid on with a knife, leaf pressed in by hand. Every canvas catches the light a little differently.</blockquote>
+      <span class="label">— Aida, studio notes</span>
+    </div>
+  </section>
+
+  <section id="commissions">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Commission a painting</h2>
+        <p>Portraits, florals, mythic scenes, gold‑leaf statement pieces. Sizes from 45 × 60 cm to wall‑scale canvases over 1.5 m.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Talk it through</h3><p>Send the room, the size and a reference you love. A photo of the wall helps.</p></div>
+        <div class="step"><div class="n">2</div><h3>Sketch and quote</h3><p>You get a composition sketch, palette and a fixed price before any paint goes on.</p></div>
+        <div class="step"><div class="n">3</div><h3>Painting</h3><p>Progress photos as layers, texture and leaf go on. Oils need time to cure.</p></div>
+        <div class="step"><div class="n">4</div><h3>Delivery</h3><p>Signed, varnished and delivered across South Florida, or shipped.</p></div>
+      </div>
+      <div class="cert">
+        <div class="seal" aria-hidden="true">A</div>
+        <p><strong style="font-weight:500">Painting passport included.</strong> Every original comes with a printed certificate: title, medium, dimensions, year, photos and the artist's signature.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="classes">
+    <div class="wrap classes">
+      <video class="mc-video" src="img/mc-video-music.mp4" poster="img/mc-poster.jpg" autoplay muted loop playsinline controls preload="metadata" aria-label="Video from a lemon masterclass at Beluga restaurant: guests painting by the lake and showing their finished paintings"></video>
+      <div>
+        <span class="label">Acrylic masterclasses</span>
+        <h2 style="font-size:clamp(34px,5vw,56px);line-height:1;margin-top:12px">Paint your own in one afternoon</h2>
+        <p style="color:var(--ink-soft);max-width:44ch">Relaxed group sessions for complete beginners. I bring everything you need, guide you step by step, and you leave with your own finished painting.</p>
+        <ul>
+          <li><span>Classic · $50</span><span>Per person. Everything you need to paint: canvas, paints, brushes, easels and aprons, plus a simply decorated table with a tablecloth and flowers</span></li>
+          <li><span>Plus · $60</span><span>Per person. Everything in Classic, plus snacks and soft drinks</span></li>
+          <li><span>Premium · $70</span><span>Per person. Everything in Plus, with a fully styled table designed around the theme of the painting</span></li>
+          <li><span>Travel</span><span>Travel to your location is an additional fee</span></li>
+          <li><span>Duration</span><span>3–4 hours</span></li>
+          <li><span>Group size</span><span>From 5 guests</span></li>
+          <li><span>Wine</span><span>Welcome: bring your own (BYOB)</span></li>
+          <li><span>Photo session</span><span>Beautiful photos of you and your painting, taken on your phone or mine, edited and sent to you afterwards</span></li>
+          <li><span>Where</span><span>In Boca Raton, at your home, or at your corporate event</span></li>
+          <li><span>Booking</span><span>At least one week in advance</span></li>
+          <li><span>Recent</span><span>Lemons, at Beluga restaurant on the lake</span></li>
+        </ul>
+        <a class="btn" href="#contact">Book a class</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <span class="label">Studio · Boca Raton, FL</span>
+        <h2 style="margin-top:14px">Let's make something for <em class="gold">your</em> wall.</h2>
+      </div>
+      <div class="lines">
+        <div class="line">
+          <span class="label">Email</span>
+          <span class="v" style="font-size:clamp(18px,4.6vw,26px);word-break:break-all"><a id="phone" href="mailto:artistaidasart@gmail.com">artistaidasart@gmail.com</a><button class="copy" type="button" data-copy="artistaidasart@gmail.com">Copy</button></span>
+        </div>
+        <div class="line">
+          <span class="label">Instagram</span>
+          <span class="v"><a href="https://instagram.com/aidaartpage" target="_blank" rel="noopener">@aidaartpage</a></span>
+        </div>
+        <div class="line">
+          <span class="label">Languages</span>
+          <span class="v" style="font-size:22px">English · Russian</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>© 2026 Aida · Original paintings</span><span>Boca Raton, Florida</span></div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{
+  const t=b.dataset.copy;
+  const done=()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1600)};
+  try{navigator.clipboard.writeText(t).then(done,()=>sel(b))}catch(e){sel(b)}
+}));
+const lb=document.getElementById('lightbox');
+const lbi=lb.querySelector('img'),lbv=lb.querySelector('video');
+document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.video){lbi.hidden=true;lbv.hidden=false;lbv.src=b.dataset.video;lbv.play().catch(()=>{})}else{lbv.pause();lbv.hidden=true;lbi.hidden=false;lbi.src=b.dataset.src}try{lb.showModal()}catch(e){lb.setAttribute('open','')}}));
+lb.addEventListener('close',()=>lbv.pause());
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('close'))lb.close()});
+function sel(b){const r=document.createRange();r.selectNodeContents(document.getElementById('phone'));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'}
+</script>
+
+</body></html>
